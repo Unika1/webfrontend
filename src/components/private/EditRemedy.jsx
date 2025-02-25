@@ -8,7 +8,7 @@ import Footer from "../Footer";
 const EditRemedy = () => {
   const { id } = useParams(); // Get remedy ID from URL
   const navigate = useNavigate();
-
+  
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [procedure, setProcedure] = useState("");

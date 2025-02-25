@@ -1,90 +1,66 @@
-/* BodyCareRemedies.css */
-
 .bodycare-remedies {
-  padding: 20px;
-  background: #f7f7f7;
-  min-height: 100vh;
   text-align: center;
-  }
-  
-  .bodycare-remedies h1 {
-    color: #2d6a4f;
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  .remedy-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  .remedy-card-link {
-    text-decoration: none;
-    color: inherit;
-  }
-  .remedy-card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;  /* Increased width */
-    padding: 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-  }
-  
-  .remedy-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .remedy-image {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    margin-bottom: 10px;
-    border-radius: 5px;
-  }
-  
-  .remedy-title {
-    font-size: 20px;
-    color: #2d6a4f;
-    margin-bottom: 10px;
-  }
-  
-  .remedy-description {
-    font-size: 14px;
-    color: #555;
-    margin-top: 8px;
-  }
-  
-  .no-remedies {
-    font-size: 18px;
-    color: #888;
-    margin-top: 50px;
-  }
-  
-  @media (max-width: 768px) {
-    .remedy-grid {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .remedy-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .remedy-card {
-      padding: 10px;
-    }
-  
-    .remedy-title {
-      font-size: 16px;
-    }
-  
-    .remedy-description {
-      font-size: 12px;
-    }
-  }
-  
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.bodycare-remedies h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.remedy-listb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.remedy-cardb {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 250px;
+  padding: 15px;
+  text-align: center;
+}
+
+.remedy-cardb img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.remedy-cardb h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.remedy-cardb p {
+  font-size: 14px;
+  color: #666;
+}
+
+.remedy-cardb button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.remedy-cardb button:hover {
+  background-color: #218838;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}

@@ -13,18 +13,44 @@ const FaceCareRemedies = () => {
   const categoryId = 3;
   
   // Fetch remedies
+  // useEffect(() => {
+  //   const fetchRemedies = async () => {
+  //     try {
+  //       const response = await axios.get(`http://localhost:5000/api/remedies/category/${categoryId}`);
+  //       console.log(response.data)
+  //       setRemedies(response.data[0]);
+  //       console.log(remedies)
+  //       debugger
+  //     } catch (error) {
+  //       console.error("Failed to fetch remedies:", error);
+  //       setError("Failed to fetch remedies");
+  //     }
+  //   };
+  //   fetchRemedies();
+  // }, [categoryId,remedies]);
+
+
+  useEffect(() => {
+    console.log("Updated remedies:", remedies);
+  }, [remedies]);
   useEffect(() => {
     const fetchRemedies = async () => {
-      try {
-        const response = await axios.get(`http://localhost:5000/api/remedies/category/${categoryId}`);
-        setRemedies(response.data);
-      } catch (error) {
-        console.error("Failed to fetch remedies:", error);
-        setError("Failed to fetch remedies");
-      }
+    try {
+    const response = await axios.get(`http://localhost:5000/api/remedies/category/${categoryId}`);
+    console.log("Fetched data:", response.data); 
+    
+    setRemedies(response.data);
+    console.log(remedies)
+    
+    } catch (error) {
+    console.error("Failed to fetch remedies:", error);
+    setError("Failed to fetch remedies");
+    }
     };
     fetchRemedies();
-  }, [categoryId]);
+    }, []);
+
+  
 
   // Check if user is admin
   const isAdmin = localStorage.getItem("role") === "admin"; 
@@ -33,6 +59,7 @@ const FaceCareRemedies = () => {
   const handleEdit = (id) => {
     navigate(`/edit-remedy/${id}`);
   };
+  
 
   // Handle Delete Remedy
   const handleDelete = async (id) => {
@@ -49,13 +76,19 @@ const FaceCareRemedies = () => {
       <Navbar />
       <h1>Face Care Remedies</h1>
 
+     
+
       {error && <p className="error-message">{error}</p>}
 
-      <div className="remedy-list">
+      <div className="remedy-listf">
+  
         {remedies.map((remedy) => (
-          <div key={remedy.id} className="remedy-card">
-            <img src={`http://localhost:5000/uploads/${remedy.image}`} alt={remedy.title} />
-            <h3>{remedy.title}</h3>
+          <div key={remedy.id} className="remedy-cardf">
+          <img 
+            src={`http://localhost:5000/uploads/${encodeURIComponent("1740477031140-Screenshot (7).png")}`} 
+            alt="Image" 
+            style={{ width: "200px", height: "200px", objectFit: "cover" }} 
+          /><h3>{remedy.title}</h3>
             <p>{remedy.description}</p>
             
             {/* Clickable Remedy Box */}

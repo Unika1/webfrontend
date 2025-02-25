@@ -14,6 +14,8 @@ const HairCare = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  const categoryId = 3;
+
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
     setError("");
@@ -44,25 +46,39 @@ const HairCare = () => {
     setError("All fields (title, description, procedure, and image) are required.");
     return;
   }
+  const token = localStorage.getItem('token');  // Assuming the token is stored in localStorage
 
+    if (!token) {
+      setError("You must be logged in to add a remedy.");
+      return;
+    }
   const formData = new FormData();
   formData.append('title', title);
   formData.append('description', description);
   formData.append('procedure', procedure);
   formData.append('image', imageFile);
+  formData.append('categoryId', categoryId);
 
   try {
-    const response = await axios.post('/api/remedies', formData, {
+    const response = await axios.post('http://localhost:5000/api/remedies', formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
+        'Authorization': `Bearer ${localStorage.getItem("token")}`,  // Include the token in the header
       },
     });
-    setError("");
-    navigate("/hair-care/remedies");
-  } catch (error) {
-    setError("Failed to add remedy. Please try again.");
-  }
+    console.log('API Response:', response.data);
+      setError("");
+      navigate("/hair-care/remedies");
+
+    } catch (error) {
+      console.error("Error:", error.response || error.message);
+      setError("Failed to add remedy. Please try again.");
+    }
 };
+useEffect(() => {
+    
+  }, []); // Refetch remedies when navigating back
+
   return (
     <div className="haircare">
       <Navbar/>
