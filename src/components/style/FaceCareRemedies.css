@@ -1,0 +1,100 @@
+.facecare-remedies {
+    padding: 20px;
+    background: #f7f7f7;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  .facecare-remedies h1 {
+    color: #2d6a4f;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .remedy-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .remedy-card-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .remedy-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;  /* Increased width */
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+  
+  .remedy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .remedy-image {
+    width: 100%;
+    height: 250px;  /* Larger image height */
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .remedy-title {
+    font-size: 20px;
+    color: #2d6a4f;
+    margin-bottom: 10px;
+  }
+  
+  .remedy-description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .no-remedies {
+    font-size: 18px;
+    color: #888;
+    margin-top: 50px;
+  }
+  .error-message {
+    color: red;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .buttons {
+    margin-top: 10px;
+  }
+  
+  .view-btn, .edit-btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .view-btn {
+    background: #007bff;
+    color: white;
+  }
+  
+  .edit-btn {
+    background: #28a745;
+    color: white;
+  }
+  
+  .view-btn:hover {
+    background: #0056b3;
+  }
+  
+  .edit-btn:hover {
+    background: #218838;
+  }

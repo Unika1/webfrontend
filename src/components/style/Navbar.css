@@ -1,0 +1,105 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #85cdb6;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Logo */
+.logo img {
+    height: 80px; /* Reduced size for better proportion */
+    width: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Navbar links */
+.nav-description {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Navbar link styling */
+.nav-description .nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Hover effect for navbar links */
+.nav-description .nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown Menu */
+.profile {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Account text */
+.account {
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Dropdown menu container */
+.profile .drop-down {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    z-index: 1000;
+}
+
+/* Dropdown items */
+.profile .drop-down a,
+.profile .drop-down button {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #ddd;
+    display: block;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Remove border for last item */
+.profile .drop-down a:last-child,
+.profile .drop-down button:last-child {
+    border-bottom: none;
+}
+
+/* Hover effect for dropdown items */
+.profile .drop-down a:hover,
+.profile .drop-down button:hover {
+    background: #85cdb6;
+    color: white;
+}
+
+/* Show dropdown on hover or when clicked */
+.profile:hover .drop-down,
+.profile:focus-within .drop-down {
+    display: flex;
+}

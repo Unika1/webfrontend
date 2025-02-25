@@ -1,0 +1,25 @@
+/* Front Section Wrapper */
+.front-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px 0;
+  }
+  
+  /* Image Styling */
+  .front-image {
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .front-image {
+      width: 95%;
+    }
+  }
+  
