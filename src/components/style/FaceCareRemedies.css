@@ -68,33 +68,16 @@
     font-size: 16px;
     margin-top: 20px;
   }
-  .buttons {
-    margin-top: 10px;
-  }
-  
-  .view-btn, .edit-btn {
-    display: inline-block;
-    margin: 5px;
-    padding: 8px 15px;
+  button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
     border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
+    cursor: pointer;
+    display: none;
+  }
+  button:hover {
+    background-color: #45a049;
   }
   
-  .view-btn {
-    background: #007bff;
-    color: white;
-  }
-  
-  .edit-btn {
-    background: #28a745;
-    color: white;
-  }
-  
-  .view-btn:hover {
-    background: #0056b3;
-  }
-  
-  .edit-btn:hover {
-    background: #218838;
-  }
