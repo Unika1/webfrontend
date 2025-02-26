@@ -22,7 +22,7 @@ const ReviewSection = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/reviews/${remedyID}`, {
+        const response = await axios.get(`http://localhost:5000/review/${remedyID}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setReviews(response.data);
@@ -53,7 +53,7 @@ const ReviewSection = () => {
     };
 
     try {
-      const response = await axios.post("http://localhost:5000/reviews", reviewData, {
+      const response = await axios.post(`http://localhost:5000/api/review/create_reviews`, reviewData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setReviews((prevReviews) => [...prevReviews, response.data]);
@@ -93,7 +93,7 @@ const ReviewSection = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:5000/reviews/${editingReviewId}`,
+        `http://localhost:5000/api/review/${editingReviewId}`,
         reviewData,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -116,7 +116,7 @@ const ReviewSection = () => {
   // Handle review deletion
   const handleDelete = async (reviewID) => {
     try {
-      await axios.delete(`http://localhost:5000/reviews/${reviewID}`, {
+      await axios.delete(`http://localhost:5000/api/review/reviews/${reviewID}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setReviews((prevReviews) => prevReviews.filter((r) => r.reviewID !== reviewID));

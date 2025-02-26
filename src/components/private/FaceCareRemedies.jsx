@@ -60,6 +60,9 @@ const FaceCareRemedies = () => {
     navigate(`/edit-remedy/${id}`);
   };
   
+  const handleSinglePage = (id) => {
+    navigate(`/edit-remedy/${id}`);
+  };
 
   // Handle Delete Remedy
   const handleDelete = async (id) => {
@@ -95,7 +98,7 @@ const FaceCareRemedies = () => {
             <p>{remedy.description}</p>
             
             {/* Clickable Remedy Box */}
-            <button onClick={() => navigate(`/face-care/details/${remedy.id}`)}>View Details</button>
+            <button onClick={() => handleSinglePage(remedy.id)}>View Details</button>
 
             {/* Show Edit & Delete Buttons Only for Admin */}
             {isAdmin && (

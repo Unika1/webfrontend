@@ -26,7 +26,7 @@ const care = React.lazy(() => import('./components/private/Care'));
 const profile=React.lazy (() => import('./components/private/Profile'));
 const EditRemedy=React.lazy (() => import('./components/private/EditRemedy'));
 const ReviewSection=React.lazy (() => import('./components/private/ReviewPage'));
-
+const ViewSingle =React.lazy (() => import('./components/private/ViewSingle'));
 
 // const AdminPanel = React.lazy(() => import('./components/private/AdminPanel')); 
 
@@ -49,8 +49,8 @@ function App() {
           <Route path="/admin/dashboard" element={<AdminPanel/>}/>
           <Route path="/userdashboard" element={<UserDashboard/>}/>
           <Route path="/edit-remedy/:id" element={<EditRemedy/>}/>
-          
-          <Route path="/review/:id" element={<ReviewSection/>} />
+          <Route path="/viewsingle/:id" element={<ViewSingle/>}/>
+          <Route path="/review" element={<ReviewSection/>} />
 
 
           {/* Protected Admin Route */}
@@ -77,7 +77,7 @@ function App() {
           <Route path="/body-care/remedies" element={<BodyCareRemedies />} />
           <Route path="/body-care/remedies/:id" element={<BodyCareDetails />} />
           {/* Fallback: redirect unmatched routes to homepage */}
-          <Route path="*" element={<Navigate to="/login" />} />
+          {/* <Route path="*" element={<Navigate to="/login" />} /> */}
         </Routes>
       </Suspense>
     </Router>

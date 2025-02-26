@@ -56,7 +56,7 @@ const Navbar = () => {
         <Link to="/contact" className="nav-link">Contact Us</Link>
         
         {/* Add Reviews Link */}
-        <Link to="/review/${remedy.id}" className="nav-link">Reviews</Link>
+        <Link to="/review" className="nav-link">Reviews</Link>
 
         <div 
           className="profile"
