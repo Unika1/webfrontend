@@ -48,7 +48,7 @@ const FaceCareRemedies = () => {
     }
     };
     fetchRemedies();
-    }, []);
+    }, [categoryId]);
 
   
 
@@ -63,9 +63,14 @@ const FaceCareRemedies = () => {
 
   // Handle Delete Remedy
   const handleDelete = async (id) => {
+    const token = localStorage.getItem("token");
     try {
-      await axios.delete(`http://localhost:5000/api/remedies/${id}`);
-      setRemedies(remedies.filter((remedy) => remedy.id !== id));
+      await axios.delete(`http://localhost:5000/api/remedies/${id}`,{
+        headers: {
+          Authorization: `Bearer ${token}`,
+      },
+    });
+    setRemedies((prevRemedies) => prevRemedies.filter((remedy) => remedy.id !== id));
     } catch (error) {
       console.error("Failed to delete remedy:", error);
     }
@@ -75,8 +80,6 @@ const FaceCareRemedies = () => {
     <div className="facecare-remedies">
       <Navbar />
       <h1>Face Care Remedies</h1>
-
-     
 
       {error && <p className="error-message">{error}</p>}
 
@@ -92,7 +95,7 @@ const FaceCareRemedies = () => {
             <p>{remedy.description}</p>
             
             {/* Clickable Remedy Box */}
-            <button onClick={() => navigate(`/facecare/details/${remedy.id}`)}>View Details</button>
+            <button onClick={() => navigate(`/face-care/details/${remedy.id}`)}>View Details</button>
 
             {/* Show Edit & Delete Buttons Only for Admin */}
             {isAdmin && (

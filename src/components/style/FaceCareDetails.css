@@ -6,7 +6,7 @@
     background: linear-gradient(to bottom, #e6faf4, #f9f9f9);
   }
   
-  h1 {
+  .facecare-details h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
     color:black;

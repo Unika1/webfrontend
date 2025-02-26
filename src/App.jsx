@@ -5,6 +5,7 @@ import ProtectedRoute from './components/private/ProtectedRoute';
 
 
 
+
 const Login = React.lazy(() => import('./components/public/Login'));
 const Signup = React.lazy(() => import('./components/public/Signup'));
 const Content = React.lazy(() => import('./components/private/Content'));
@@ -24,6 +25,7 @@ const UserDashboard = React.lazy(() => import('./components/private/UserDashboar
 const care = React.lazy(() => import('./components/private/Care')); 
 const profile=React.lazy (() => import('./components/private/Profile'));
 const EditRemedy=React.lazy (() => import('./components/private/EditRemedy'));
+const ReviewSection=React.lazy (() => import('./components/private/ReviewPage'));
 
 
 // const AdminPanel = React.lazy(() => import('./components/private/AdminPanel')); 
@@ -46,8 +48,9 @@ function App() {
           {/* <Route path="/care" element={<Care/>}/> */}
           <Route path="/admin/dashboard" element={<AdminPanel/>}/>
           <Route path="/userdashboard" element={<UserDashboard/>}/>
-          <Route path="/edit-remedy" element={<EditRemedy/>}/>
+          <Route path="/edit-remedy/:id" element={<EditRemedy/>}/>
           
+          <Route path="/review/:id" element={<ReviewSection/>} />
 
 
           {/* Protected Admin Route */}

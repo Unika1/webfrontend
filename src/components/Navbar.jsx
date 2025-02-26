@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/images/logo.jpg";
 import "../components/style/Navbar.css";
@@ -6,6 +6,7 @@ import "../components/style/Navbar.css";
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [userRole, setUserRole] = useState(null); // State to store user role
+  const dropdownRef = useRef(null); // Ref for the dropdown
   const navigate = useNavigate(); 
 
   useEffect(() => {
@@ -14,10 +15,33 @@ const Navbar = () => {
     setUserRole(storedRole);
   }, []);
 
+  useEffect(() => {
+    // Close dropdown if clicked outside
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+    
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   const handleLogout = () => {
     localStorage.removeItem("userToken");
     localStorage.removeItem("userRole"); // Remove role on logout
     navigate("/login"); 
+  };
+
+  const handleProfileClick = () => {
+    if (userRole === "admin") {
+      navigate("/admin/dashboard");
+    } else {
+      navigate("/homepage");
+    }
+    setDropdownOpen(false); // Close dropdown after click
   };
 
   return (
@@ -30,6 +54,9 @@ const Navbar = () => {
         <Link to="/homepage" className="nav-link">Home</Link>
         <Link to="/about" className="nav-link">About Us</Link>
         <Link to="/contact" className="nav-link">Contact Us</Link>
+        
+        {/* Add Reviews Link */}
+        <Link to="/review/${remedy.id}" className="nav-link">Reviews</Link>
 
         <div 
           className="profile"
@@ -40,7 +67,7 @@ const Navbar = () => {
           <div className="account">
             Account
             {dropdownOpen && (
-              <div className="drop-down" onClick={(e) => e.stopPropagation()}>
+              <div className="drop-down" ref={dropdownRef} onClick={(e) => e.stopPropagation()}>
                 {/* Redirect based on user role */}
                 {userRole === "admin" ? (
                   <Link to="/admin/dashboard">Admin Panel</Link>

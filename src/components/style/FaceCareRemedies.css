@@ -35,7 +35,7 @@ h1 {
 
 .remedy-cardf img {
   border-radius: 8px;
-  width: 100%;
+  width: 60%;
   height: 200px;
   object-fit: cover;
 }
@@ -52,35 +52,40 @@ h1 {
 }
 
 button {
-  background-color: #28a745;
-  color: white;
+  background-color: rgb(125, 125, 83);
+  color: #fff;
+  padding: 10px;
   border: none;
-  padding: 8px 15px;
+  border-radius: 4px;
   cursor: pointer;
-  border-radius: 5px;
-  font-size: 14px;
-  margin: 5px;
-  transition:0.3s ease;
+  width: 60%;
+  font-size: 16px;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  transition: 0.3s;
+
 }
 
 button:hover {
-  background-color: #218838;
+  background-color: #666;
 }
 
 button:nth-child(2) {
-  background-color: #ffc107;
+  background-color: #666;
+
 }
 
 button:nth-child(2):hover {
-  background-color: #e0a800;
+  background-color: #666;
 }
 
 button:nth-child(3) {
-  background-color: #dc3545;
+  background-color: #666;
 }
 
 button:nth-child(3):hover {
-  background-color: #218838;
+  background-color: #666;
 }
 
 .error-message {

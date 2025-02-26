@@ -24,7 +24,7 @@ const HairCareRemedies = () => {
       }
     };
     fetchRemedies();
-  }, []);
+  }, [categoryId]);
 
   // Check if user is admin
   const isAdmin = localStorage.getItem("role") === "admin";
@@ -36,10 +36,15 @@ const HairCareRemedies = () => {
 
   // Handle Delete Remedy
   const handleDelete = async (id) => {
+    const token = localStorage.getItem("token");
     try {
-      await axios.delete(`http://localhost:5000/api/remedies/${id}`);
-      setRemedies(remedies.filter((remedy) => remedy.id !== id));
-    } catch (error) {
+      await axios.delete(`http://localhost:5000/api/remedies/${id}`,{
+        headers: {
+          Authorization: `Bearer ${token}`,
+      },
+    });
+    setRemedies((prevRemedies) => prevRemedies.filter((remedy) => remedy.id !== id));
+   } catch (error) {
       console.error("Failed to delete remedy:", error);
     }
   };
@@ -55,7 +60,7 @@ const HairCareRemedies = () => {
         {remedies.map((remedy) => (
           <div key={remedy.id} className="remedy-cardh">
             <img
-              src={`http://localhost:5000/uploads/${encodeURIComponent(remedy.image)}`}
+              src={`http://localhost:5000/uploads/${encodeURIComponent("1740477031140-Screenshot (7).png")}`}
               alt="Image"
               style={{ width: "200px", height: "200px", objectFit: "cover" }}
             />
@@ -63,7 +68,7 @@ const HairCareRemedies = () => {
             <p>{remedy.description}</p>
             
             {/* Clickable Remedy Box */}
-            <button onClick={() => navigate(`/haircare/details/${remedy.id}`)}>View Details</button>
+            <button onClick={() => navigate(`/hair-care/details/${remedy.id}`)}>View Details</button>
 
             {/* Show Edit & Delete Buttons Only for Admin */}
             {isAdmin && (

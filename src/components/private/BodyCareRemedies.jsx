@@ -24,7 +24,7 @@ const BodyCareRemedies = () => {
       }
     };
     fetchRemedies();
-  }, []);
+  }, [categoryId]);
 
   const isAdmin = localStorage.getItem("role") === "admin";
 
@@ -33,9 +33,14 @@ const BodyCareRemedies = () => {
   };
 
   const handleDelete = async (id) => {
+    const token = localStorage.getItem("token");
     try {
-      await axios.delete(`http://localhost:5000/api/remedies/${id}`);
-      setRemedies(remedies.filter((remedy) => remedy.id !== id));
+      await axios.delete(`http://localhost:5000/api/remedies/${id}`,{
+        headers: {
+          Authorization: `Bearer ${token}`,
+      },
+    });
+    setRemedies((prevRemedies) => prevRemedies.filter((remedy) => remedy.id !== id));
     } catch (error) {
       console.error("Failed to delete remedy:", error);
     }
@@ -56,7 +61,7 @@ const BodyCareRemedies = () => {
             />
             <h3>{remedy.title}</h3>
             <p>{remedy.description}</p>
-            <button onClick={() => navigate(`/bodycare/details/${remedy.id}`)}>View Details</button>
+            <button onClick={() => navigate(`/body-care/details/${remedy.id}`)}>View Details</button>
             {isAdmin && (
               <>
                 <button onClick={() => handleEdit(remedy.id)}>Edit</button>

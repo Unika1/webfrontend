@@ -15,45 +15,50 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  padding: 20px;
 }
 
 .remedy-cardb {
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  padding: 20px;
   width: 250px;
-  padding: 15px;
   text-align: center;
+  transition: transform 0.3s ease;
 }
 
 .remedy-cardb img {
-  width: 100%;
+  width: 60%;
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
 }
 
 .remedy-cardb h3 {
-  font-size: 18px;
+  color: #444;
   margin: 10px 0;
-  color: #333;
 }
 
 .remedy-cardb p {
-  font-size: 14px;
   color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .remedy-cardb button {
-  background-color: #28a745;
-  color: white;
+  background-color: rgb(125, 125, 83);
+  color: #fff;
+  padding: 10px;
   border: none;
-  padding: 8px 12px;
-  margin-top: 10px;
+  border-radius: 4px;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  width: 60%;
+  font-size: 16px;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  transition: 0.3s;
 }
 
 .remedy-cardb button:hover {
