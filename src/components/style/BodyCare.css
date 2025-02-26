@@ -1,0 +1,141 @@
+/* BodyCare.css */
+
+.bodycare {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #e6faf4, #f9f9f9);
+}
+
+.bodycare-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.bodycare-container h1 {
+  text-align: center;
+  color: #2f4f4f;
+  margin-bottom: 1.5rem;
+}
+
+.remedy-form {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.remedy-form label {
+  font-weight: bold;
+  text-align: left;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+/* input,
+textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+} */
+.remedy-form input[type="text"],
+.remedy-form input[type="file"],
+.remedy-form textarea {
+  width: 98%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  /* box-sizing: border-box; */
+  transition: border 0.3s;
+}
+.remedy-form input[type="text"]:focus,
+.remedy-form input[type="file"]:focus,
+.remedy-form textarea:focus {
+  border-color: #556b2f;
+  outline: none;
+}
+
+button {
+  background-color: #6b8e23;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 70%;
+  font-size: 16px;
+  margin: 20px auto;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #556b2f;
+}
+
+.error-message {
+  color: #d8000c;
+  background-color: #ffd2d2;
+  border: 1px solid #d8000c;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Mobile & Tablet Responsive Styles */
+@media (max-width: 768px) {
+  .bodycare-container {
+    padding: 15px;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bodycare-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .error-message {
+    font-size: 12px;
+  }
+}

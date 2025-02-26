@@ -1,0 +1,195 @@
+/* ✅ General Styling */
+.remedy-detail {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* ✅ Much Wider Remedy Container */
+  .remedy-container {
+    max-width: 900px;  /* 🔥 Increased width */
+    width: 90%;
+    margin: 50px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* ✅ Remedy Title Section */
+  .remedy-title-section {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .remedy-title-section h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 15px;
+  }
+  
+  .remedy-title-section p {
+    font-size: 1.3rem;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* ✅ Wider Remedy Image */
+  .remedy-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 30px 0;
+    display: block;
+  }
+  
+  /* ✅ Section Headings */
+  .section-heading {
+    font-size: 1.8rem;
+    color: #17a2b8;
+    margin-top: 30px;
+    font-weight: bold;
+    border-bottom: 3px solid #ddd;
+    padding-bottom: 8px;
+  }
+  
+  /* ✅ Procedure Section */
+  .remedy-procedure {
+    font-size: 1.2rem;
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.7;
+  }
+  
+  /* ✅ Review Section */
+  .review-section {
+    margin-top: 35px;
+  }
+  
+  .review-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+  }
+  
+  .review-item {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    border-left: 6px solid #17a2b8;
+    font-size: 1.1rem;
+  }
+  
+  .no-reviews {
+    font-size: 1.2rem;
+    color: #777;
+    text-align: center;
+  }
+  
+  /* ✅ Review Form */
+  .review-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .review-textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: none;
+    margin-bottom: 15px;
+  }
+  
+  .submit-review-btn {
+    background: #28a745;
+    color: white;
+    font-size: 1.1rem;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .submit-review-btn:hover {
+    background: #218838;
+  }
+  
+  /* ✅ Back to Home Button */
+  .back-btn {
+    display: block;
+    margin: 30px auto;
+    background: #007bff;
+    color: white;
+    font-size: 1.1rem;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  .back-btn:hover {
+    background: #0056b3;
+  }
+  
+  /* ✅ Loading Spinner */
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #ddd;
+    border-top: 6px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* ✅ Error Message */
+  .error-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 1.3rem;
+  }
+  .delete-review-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .delete-review-btn:hover {
+    background-color: darkred;
+  }
+  

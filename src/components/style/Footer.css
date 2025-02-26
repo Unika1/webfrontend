@@ -1,0 +1,41 @@
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 0.5rem 2rem; /* Reduced padding to decrease height */
+    text-align: center;
+}
+
+footer .footer1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+footer .footer1 ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer1 p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+footer .footer1 a {
+    text-decoration: none;
+    color: #85cdb6;
+    display: block;
+    margin: 0.3rem 0;
+}
+
+footer .footer1 a:hover {
+    color: white;
+}
+
+footer .footer2 {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #ccc;
+}

@@ -1,0 +1,112 @@
+/* General Styling for FaceCare Page */
+.facecare {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #e6faf4, #f9f9f9);
+}
+
+.facecare-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.facecare-container h1 {
+  font-size: 2.5rem;
+  color: #2f4f4f;
+  margin-bottom: 1.5rem;
+}
+
+/* Form Styling */
+.remedy-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.remedy-form label {
+  font-weight: bold;
+  color: #444;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.remedy-form input[type="text"],
+.remedy-form input[type="file"],
+.remedy-form textarea {
+  width: 98%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  /* box-sizing: border-box; */
+  transition: border 0.3s;
+}
+
+.remedy-form input[type="text"]:focus,
+.remedy-form input[type="file"]:focus,
+.remedy-form textarea:focus {
+  border-color: #556b2f;
+  outline: none;
+}
+
+/* Button Styling */
+button {
+  background-color: #6b8e23;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 70%;
+  font-size: 16px;
+  margin: 20px auto;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #556b2f;
+}
+
+/* Error Message */
+.error-message {
+  color: #d8000c;
+  background-color: #ffd2d2;
+  border: 1px solid #d8000c;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+.facecare-image{
+  width: 100%;
+  max-width: 400px; /* Set max width to ensure it doesn't get too large */
+  height: auto; /* Maintain the aspect ratio */
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .facecare-container {
+    width: 90%;
+    padding: 20px;
+  }
+  .facecare-image {
+      max-width: 100%;}
+  .facecare-container h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
