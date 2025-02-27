@@ -167,7 +167,7 @@ const RemedyDetail = () => {
         <h3 className="section-heading">📝 Procedure</h3>
         <p className="remedy-procedure">{remedy.procedure}</p>
 
-        {/* ✅ Reviews Section */}
+        {/*Reviews Section */}
         <div className="review-section">
           <h3 className="section-heading">📝 User Reviews</h3>
           {reviews.length > 0 ? (
@@ -176,7 +176,7 @@ const RemedyDetail = () => {
                 <li key={review.id} className="review-item">
                   <strong>{review.username}:</strong> 
                   
-                  {/* ✅ If in edit mode, show textarea */}
+                  {/* If in edit mode, show textarea */}
                   {editingReviewId === review.id ? (
                     <>
                       <textarea
@@ -190,7 +190,7 @@ const RemedyDetail = () => {
                     <span>{review.comment}</span>
                   )}
 
-                  {/* ✅ Show buttons only for the logged-in user's reviews */}
+                  {/* Show buttons only for the logged-in user's reviews */}
                   {review.userId === Number(userId) && (
                     <div>
                       <button className="edit-review-btn" onClick={() => handleEditClick(review)}>✏️ Edit</button>
