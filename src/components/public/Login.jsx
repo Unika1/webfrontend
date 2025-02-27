@@ -16,7 +16,7 @@ function Login() {
     return regex.test(email);
   };
 
-  // ⛔ Prevent logged-in users from accessing login page
+  // Prevent logged-in users from accessing login page
   useEffect(() => {
     const storedRole = localStorage.getItem("userRole");
     if (storedRole === "admin") {
@@ -68,7 +68,7 @@ function Login() {
         localStorage.setItem("userId", userID);
         console.log("Stored User Role:", localStorage.getItem("userRole")); // Debugging
 
-        // ✅ Redirect based on role
+        // Redirect based on role
         if (userRole === "admin") {
           navigate("/admin");
         } else {
