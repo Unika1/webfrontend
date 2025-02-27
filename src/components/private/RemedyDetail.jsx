@@ -72,7 +72,7 @@ const RemedyDetail = () => {
         alert("Unexpected response format!");
       }
     } catch (error) {
-      console.error("❌ Error submitting review:", error.response?.data || error.message);
+      console.error("Error submitting review:", error.response?.data || error.message);
       alert("Failed to submit review. Please try again.");
     }
   };
