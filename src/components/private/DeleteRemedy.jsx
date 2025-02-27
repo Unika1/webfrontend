@@ -19,7 +19,7 @@ function DeleteRemedy({ remedyId, onDeleteSuccess }) {
                 },
               });
 
-            console.log("✅ Server response:", response);
+            console.log("Server response:", response);
 
             if (response.status === 200) {
                 alert("✅ Remedy deleted successfully");
