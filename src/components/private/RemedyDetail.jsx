@@ -16,7 +16,7 @@ const RemedyDetail = () => {
   const [editingReviewId, setEditingReviewId] = useState(null);
   const [editedReviewText, setEditedReviewText] = useState("");
 
-  // ✅ Get user details from localStorage
+  // Get user details from localStorage
   const username = localStorage.getItem("username");
   const userId = localStorage.getItem("userId");
 
