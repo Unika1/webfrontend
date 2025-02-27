@@ -68,7 +68,7 @@ const RemedyDetail = () => {
         setNewReview("");
         setReviews([...reviews, response.data.review]);
       } else {
-        console.error("❌ Unexpected response format:", response.data);
+        console.error("Unexpected response format:", response.data);
         alert("Unexpected response format!");
       }
     } catch (error) {
