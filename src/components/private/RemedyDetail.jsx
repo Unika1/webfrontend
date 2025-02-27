@@ -93,11 +93,11 @@ const RemedyDetail = () => {
         setReviews(reviews.filter((review) => review.id !== reviewId));
         console.log("Review deleted successfully");
       } else {
-        console.error("❌ Unexpected response:", response.data);
+        console.error("Unexpected response:", response.data);
         alert("Failed to delete review.");
       }
     } catch (error) {
-      console.error("❌ Error deleting review:", error.response?.data || error.message);
+      console.error("Error deleting review:", error.response?.data || error.message);
       alert("Failed to delete review. Please try again.");
     }
   };
