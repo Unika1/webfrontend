@@ -77,7 +77,7 @@ const RemedyDetail = () => {
     }
   };
 
-  // ✅ Delete Review
+  //Delete Review
   const handleDeleteReview = async (reviewId) => {
     try {
       if (!userId) {
