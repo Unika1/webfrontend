@@ -12,10 +12,10 @@ const FaceCareRemedies = () => {
     const fetchRemedies = async () => {
       try {
         const response = await axios.get("http://localhost:5000/api/remedies");
-        console.log("🔵 API Response:", response.data);
+        console.log("API Response:", response.data);
         setRemedies(response.data);
       } catch (error) {
-        console.error("❌ Error fetching remedies:", error);
+        console.error("Error fetching remedies:", error);
       }
     };
     fetchRemedies();
@@ -39,7 +39,7 @@ const FaceCareRemedies = () => {
                 <div className="remedy-info">
                   <h3 className="remedy-title">{remedy.title}</h3>
                   <p className="remedy-description">{remedy.description}</p>
-                  {/* ✅ Added View button */}
+                  {/* Added View button */}
                   <Link to={`/face-care/remedies/${remedy.id}`} className="view-btn">
                     View
                   </Link>
