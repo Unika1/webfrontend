@@ -10,7 +10,7 @@ function DeleteRemedy({ remedyId, onDeleteSuccess }) {
                 return;
             }
 
-            console.log("🟡 Deleting remedy ID:", remedyId);
+            console.log(" Deleting remedy ID:", remedyId);
             console.log("🟢 Sending request with token:", token);
 
             const response = await axios.delete(`http://localhost:5000/api/remedies/${remedyId}`, {
