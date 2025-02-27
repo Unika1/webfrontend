@@ -108,7 +108,7 @@ const RemedyDetail = () => {
     setEditedReviewText(review.comment);
   };
 
-  // ✅ Save Edited Review
+  // Save Edited Review
   const handleSaveEdit = async (reviewId) => {
     try {
       const response = await axios.put(`http://localhost:5000/api/reviews/${reviewId}`, {
@@ -121,13 +121,13 @@ const RemedyDetail = () => {
           review.id === reviewId ? { ...review, comment: editedReviewText } : review
         ));
         setEditingReviewId(null);
-        console.log("✅ Review updated successfully");
+        console.log("Review updated successfully");
       } else {
-        console.error("❌ Unexpected response:", response.data);
+        console.error("Unexpected response:", response.data);
         alert("Failed to update review.");
       }
     } catch (error) {
-      console.error("❌ Error updating review:", error.response?.data || error.message);
+      console.error("Error updating review:", error.response?.data || error.message);
       alert("Failed to update review. Please try again.");
     }
   };
