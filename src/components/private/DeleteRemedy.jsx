@@ -29,7 +29,7 @@ function DeleteRemedy({ remedyId, onDeleteSuccess }) {
             }
         } catch (error) {
             console.error("Error deleting remedy:", error.response?.data || error.message);
-            alert("❌ " + (error.response?.data?.error || "Unknown error"));
+            alert("" + (error.response?.data?.error || "Unknown error"));
         }
     };
 

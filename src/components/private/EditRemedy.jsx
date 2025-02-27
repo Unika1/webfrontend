@@ -58,7 +58,7 @@ const EditRemedy = () => {
 
     const token = localStorage.getItem("token");
     if (!token) {
-      console.error("❌ No token found. Please log in again.");
+      console.error(" No token found. Please log in again.");
       setError("Unauthorized: Please log in again.");
       setLoading(false);
       return;
