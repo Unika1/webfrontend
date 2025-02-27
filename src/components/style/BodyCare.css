@@ -1,4 +1,4 @@
-/* BodyCare.css */
+/* BodyCare.css
 
 .bodycare {
   display: flex;
@@ -50,7 +50,7 @@ textarea {
   resize: vertical;
   min-height: 100px;
 } */
-.remedy-form input[type="text"],
+/* .remedy-form input[type="text"],
 .remedy-form input[type="file"],
 .remedy-form textarea {
   width: 98%;
@@ -59,8 +59,8 @@ textarea {
   border-radius: 5px;
   font-size: 16px;
   /* box-sizing: border-box; */
-  transition: border 0.3s;
-}
+  /* transition: border 0.3s;
+} */
 .remedy-form input[type="text"]:focus,
 .remedy-form input[type="file"]:focus,
 .remedy-form textarea:focus {
@@ -138,4 +138,4 @@ button:hover {
   .error-message {
     font-size: 12px;
   }
-}
+}  
