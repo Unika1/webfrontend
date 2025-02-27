@@ -72,7 +72,7 @@ const EditRemedy = () => {
         },
       });
 
-      alert("✅ Remedy updated successfully!");
+      alert("Remedy updated successfully!");
       navigate("/admin");
     } catch (error) {
       console.error("❌ Error updating remedy:", error.response?.data || error.message);
