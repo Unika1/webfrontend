@@ -102,7 +102,7 @@ const RemedyDetail = () => {
     }
   };
 
-  // ✅ Enable Edit Mode
+  // Enable Edit Mode
   const handleEditClick = (review) => {
     setEditingReviewId(review.id);
     setEditedReviewText(review.comment);
