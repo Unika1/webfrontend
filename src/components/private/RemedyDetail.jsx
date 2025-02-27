@@ -45,7 +45,7 @@ const RemedyDetail = () => {
     fetchReviews();
   }, [id]);
 
-  // ✅ Submit New Review
+  // Submit New Review
   const handleReviewSubmit = async (e) => {
     e.preventDefault();
 
