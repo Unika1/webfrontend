@@ -22,16 +22,6 @@ const Content = () => {
             <p>See more remedies</p>
           </div>
         </div>
-
-
-        {/* for general remedies box  */}
-        {/* <div className="box">
-          <div className="box-content">
-            <h2>All Remedies</h2>
-            <div className="box-image" style={{ backgroundImage: `url(${remedyIcon})` }}></div>
-            <p>Explore all remedies</p>
-          </div>
-        </div> */}
       </div>
     </div>
   );
