@@ -75,7 +75,7 @@ const EditRemedy = () => {
       alert("Remedy updated successfully!");
       navigate("/admin");
     } catch (error) {
-      console.error("❌ Error updating remedy:", error.response?.data || error.message);
+      console.error("Error updating remedy:", error.response?.data || error.message);
       setError(error.response?.data?.error || "Failed to update remedy. Please try again.");
     } finally {
       setLoading(false);
