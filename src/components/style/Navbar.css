@@ -1,6 +1,6 @@
-/* 🌿 General Navbar Styling */
+/*General Navbar Styling */
 .navbar {
-  background: linear-gradient(135deg, #2c3e50, #34495e);
+  background-color: #85cdb6;
   padding: 15px 0;
   position: sticky;
   top: 0;
@@ -18,7 +18,7 @@
   padding: 0 20px;
 }
 
-/* 🌟 Logo Styling */
+/* Logo Styling */
 .logo-container {
   display: flex;
   align-items: center;
@@ -81,19 +81,19 @@
   font-weight: bold;
   padding: 8px 15px;
   border-radius: 6px;
-  transition: background 0.3s ease-in-out;
+  transition:0.3s ease-in-out;
 }
 
 
 .account-dropdown:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: #85cdb6;
 }
 
 .dropdown-menu {
   position: absolute;
   top: 100%;
   right: 0;
-  background: #34495e;
+  background: white;
   border-radius: 6px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   min-width: 150px;
@@ -116,11 +116,11 @@
   text-decoration: none;
   color: #ecf0f1;
   font-size: 14px;
-  transition: background 0.3s ease-in-out;
+  transition:  0.3s ease-in-out;
 }
 
 .dropdown-item:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: #85cdb6;
 }
 
 .logout-btn {
@@ -132,14 +132,14 @@
   text-align: left;
   font-size: 14px;
   cursor: pointer;
-  transition: background 0.3s ease-in-out;
+  transition:  0.3s ease-in-out;
 }
 
 .logout-btn:hover {
-  background: rgba(231, 76, 60, 0.2);
+  background: #85cdb6;
 }
 
-/* 📱 Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
   .nav-links {
     display: none;

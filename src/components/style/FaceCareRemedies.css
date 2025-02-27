@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background: #f8f9fa;
+  background-color: #f9f9f9;
   font-family: "Poppins", sans-serif;
 }
 
@@ -128,7 +128,7 @@
 .view-btn {
   display: inline-block;
   padding: 8px 12px;
-  background-color: #007bff;
+  background-color:#6b8e23;
   color: white;
   text-align: right;
   border-radius: 5px;
@@ -137,5 +137,5 @@
 }
 
 .view-btn:hover {
-  background-color: #0056b3;
+  background-color: #556b2f;
 }

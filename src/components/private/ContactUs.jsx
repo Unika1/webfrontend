@@ -6,7 +6,7 @@ import "../style/ContactUs.css"; // Ensure correct path
 const ContactUs = () => {
   return (
     <>
-      <Navbar /> {/* ✅ Navbar Added */}
+      <Navbar /> {/* Navbar Added */}
       <div className="contact-container">
         <div className="contact-header">
           <h1>Contact <span>Earthly Glow</span></h1>
@@ -18,8 +18,8 @@ const ContactUs = () => {
           <div className="contact-info">
             <h2>Our Contact Details</h2>
             <p><strong>Email:</strong> support@earthlyglow.com</p>
-            <p><strong>Phone:</strong> +61 123 456 789</p>
-            <p><strong>Address:</strong> 123 Nature Lane, Sydney, Australia</p>
+            <p><strong>Phone:</strong> +977 984111111</p>
+            <p><strong>Address:</strong> Kathmandu</p>
           </div>
 
           {/* Contact Form */}
@@ -43,7 +43,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <Footer /> {/* ✅ Footer Added */}
+      <Footer /> {/* Footer Added */}
     </>
   );
 };
