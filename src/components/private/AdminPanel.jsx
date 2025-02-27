@@ -16,7 +16,7 @@ const AdminPanel = () => {
     const role = localStorage.getItem("userRole");
 
     if (role !== "admin") {
-      navigate("/homepage"); // 🚫 Redirect non-admin users
+      navigate("/homepage"); // Redirect non-admin users
     } else {
       fetchRemedies();
     }
