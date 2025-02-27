@@ -62,7 +62,7 @@ const RemedyDetail = () => {
         comment: newReview,
       });
 
-      console.log("✅ Review Submitted Successfully:", response.data);
+      console.log("Review Submitted Successfully:", response.data);
 
       if (response.data.success) {
         setNewReview("");
