@@ -6,7 +6,7 @@ import "../style/AboutUs.css"; // Ensure correct path
 const AboutUs = () => {
   return (
     <>
-      <Navbar /> {/* ✅ Navbar Added */}
+      <Navbar /> {/* Navbar Added */}
       <div className="about-container">
         <div className="about-header">
           <h1>About <span>Earthly Glow</span></h1>
@@ -32,7 +32,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <Footer /> {/* ✅ Footer Added */}
+      <Footer /> {/* Footer Added */}
     </>
   );
 };
