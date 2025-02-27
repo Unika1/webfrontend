@@ -91,7 +91,7 @@ const RemedyDetail = () => {
 
       if (response.data.success) {
         setReviews(reviews.filter((review) => review.id !== reviewId));
-        console.log("✅ Review deleted successfully");
+        console.log("Review deleted successfully");
       } else {
         console.error("❌ Unexpected response:", response.data);
         alert("Failed to delete review.");
