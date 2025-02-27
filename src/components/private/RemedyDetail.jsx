@@ -37,7 +37,7 @@ const RemedyDetail = () => {
         const response = await axios.get(`http://localhost:5000/api/reviews/${id}`);
         setReviews(response.data);
       } catch (error) {
-        console.error("❌ Error fetching reviews:", error);
+        console.error("Error fetching reviews:", error);
       }
     };
 
